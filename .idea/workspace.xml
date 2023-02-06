@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="08b6ad7c-68b3-446b-b536-266462fd750d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Mortgage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Mortgage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MortgageCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MortgageCalculator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

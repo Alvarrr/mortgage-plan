@@ -71,10 +71,10 @@ public class MortgageCalculator {
         for (Mortgage mortgage : mortgages) {
             mortgage.calculatePaymentFormula();
             System.out.println
-                    ("Customer: " + mortgage.getCustomer() + "\n"
+                    ("\nCustomer: " + mortgage.getCustomer() + "\n"
                     + "Total loan: " + mortgage.getTotalLoan() + "\n"
                     + "Years: " + mortgage.getYears() + "\n"
-                    + "Monthly payment: " + mortgage.getMonthlyPayment());
+                    + "Monthly payment: " + mortgage.getMonthlyPayment() + "\n");
         }
     }
 
