@@ -25,7 +25,7 @@ public class Mortgage {
     }
 
     // java.math is not allowed -> my own powerOf() function
-    private double powerOf(double base, int power) {
+    public double powerOf(double base, int power) {
         double num = 1;
         for (int i = 0; i < power; i++) {
             num = num * base;
@@ -33,7 +33,7 @@ public class Mortgage {
         return num;
     }
 
-    private double roundTwoDecimals(double num) {
+    public double roundTwoDecimals(double num) {
         num *= 100.0;
         num += 0.5;
         num = (int)num;
@@ -50,7 +50,7 @@ public class Mortgage {
         this.customer = newCustomer;
     }
 
-    public double getTotalLoan() {
+    public float getTotalLoan() {
         return totalLoan;
     }
 
@@ -58,7 +58,7 @@ public class Mortgage {
         this.totalLoan = newTotalLoan;
     }
 
-    public double getInterest() {
+    public float getInterest() {
         return interest;
     }
 

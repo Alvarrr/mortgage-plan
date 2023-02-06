@@ -1,6 +1,19 @@
 plugins {
 	id 'java'
 	id 'application'
+	id 'groovy'
 }
 
 mainClassName = "Main"
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+}
+
+test {
+	useJUnitPlatform()
+}
