@@ -1,5 +1,3 @@
-package alvarblomqvist;
-
 // Class for mortgage database & calculating monthly payments
 public class Mortgage {
     private String customer;

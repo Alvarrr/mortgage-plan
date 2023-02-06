@@ -1,5 +1,3 @@
-package alvarblomqvist;
-
 import java.util.ArrayList;
 import java.io.File;
 import java.io.FileReader;
@@ -36,15 +34,13 @@ public class MortgageCalculator {
     public ArrayList<Mortgage> createMortgage(ArrayList<String> currentFile) {
 
         ArrayList<Mortgage> mortgagesList = new ArrayList<>();
-        String[] elements = new String[4];
 
         for(String i : currentFile) {
 
-            i.replace(",", " ");     // replace commas with whitespace
-            elements = i.split("[\\W]");       // split string at non-letter characters using regex
+            String[] elements = i.split("[\\W]");       // split string at non-letter characters using regex
 
             // Assign current variables to instance variables in the mortgage
-            String customer = elements[0];
+            String customer = cleanUp(elements[0]);
             float totalLoan = Float.parseFloat(elements[1]);
             float interest = Float.parseFloat(elements[2]);
             int years = Integer.parseInt(elements[3]);
