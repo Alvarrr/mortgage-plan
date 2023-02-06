@@ -35,9 +35,11 @@ public class MortgageCalculator {
 
         ArrayList<Mortgage> mortgagesList = new ArrayList<>();
 
+        currentFile.remove(0).split(",");    // removes unnecessary commas
+
         for(String i : currentFile) {
 
-            String[] elements = i.split("\\W]");      // split string at non-letter characters using regex
+            String[] elements = i.split(("(?!\".*)(,)(?!.*\")"));    // split string at non-letter characters using regex
 
             if(elements.length < 4) {
                 continue;
@@ -69,10 +71,10 @@ public class MortgageCalculator {
         for (Mortgage mortgage : mortgages) {
             mortgage.calculatePaymentFormula();
             System.out.println
-                    ("Customer:" + mortgage.getCustomer() + "\n"
-                    + "Total loan:" + mortgage.getTotalLoan() + "\n"
-                    + "Years:" + mortgage.getYears() + "\n"
-                    + "Monthly payment:" + mortgage.getMonthlyPayment());
+                    ("Customer: " + mortgage.getCustomer() + "\n"
+                    + "Total loan: " + mortgage.getTotalLoan() + "\n"
+                    + "Years: " + mortgage.getYears() + "\n"
+                    + "Monthly payment: " + mortgage.getMonthlyPayment());
         }
     }
 

@@ -1,8 +1,8 @@
 // Class for mortgage database & calculating monthly payments
 public class Mortgage {
     private String customer;
-    private double totalLoan;
-    private double interest;
+    private float totalLoan;
+    private float interest;
     private int years;
     private double monthlyPayment;
 
@@ -21,7 +21,7 @@ public class Mortgage {
         int p = years * 12;                     // # years the customer wants to pay off the mortgage
 
         double monthlyPayment = U * ((b * powerOf(1+b, p)) / (powerOf(1+b, p) -1));     // uses given formula for interest calculation
-        this.monthlyPayment = monthlyPayment;   // applies calculation to instance variable
+        this.monthlyPayment = roundTwoDecimals(monthlyPayment);   // applies calculation to instance variable
     }
 
     // java.math is not allowed -> my own powerOf() function
@@ -33,8 +33,11 @@ public class Mortgage {
         return num;
     }
 
-    // TODO: method for rounding number to two decimal places
     private double roundTwoDecimals(double num) {
+        num *= 100.0;
+        num += 0.5;
+        num = (int)num;
+        num /= 100.0;
         return num;
     }
 
@@ -51,7 +54,7 @@ public class Mortgage {
         return totalLoan;
     }
 
-    public void setTotalLoan(double newTotalLoan) {
+    public void setTotalLoan(float newTotalLoan) {
         this.totalLoan = newTotalLoan;
     }
 
@@ -59,7 +62,7 @@ public class Mortgage {
         return interest;
     }
 
-    public void setInterest(double newInterest) {
+    public void setInterest(float newInterest) {
         this.interest = newInterest;
     }
 
