@@ -37,7 +37,11 @@ public class MortgageCalculator {
 
         for(String i : currentFile) {
 
-            String[] elements = i.split("[\\W]");       // split string at non-letter characters using regex
+            String[] elements = i.split("\\W]");      // split string at non-letter characters using regex
+
+            if(elements.length < 4) {
+                continue;
+            }
 
             // Assign current variables to instance variables in the mortgage
             String customer = cleanUp(elements[0]);
